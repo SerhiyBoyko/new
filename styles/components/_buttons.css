@@ -1,0 +1,32 @@
+.btn {
+    @apply inline-flex justify-center items-center m:w-full mt:px-20px d:px-6 mt:h-48px d:h-52px rounded-32;
+}
+.btn .text{
+    @apply mt:text-sm d:text-base font-semibold;
+}
+
+.btn-min {
+    @apply inline-flex justify-center items-center px-15px mt:h-38px d:h-42px rounded-32;
+}
+.btn-min .text{
+    @apply text-sm font-semibold;
+}
+
+.btn-roll{
+    @apply inline-flex justify-center items-center mt:min-w-38 mt:w-38px mt:h-38px d:min-w-42 d:w-42px d:h-42px rounded-full;
+}
+.btn-transperent{
+    @apply bg-transparent text-secondary-2;
+}
+.btn-white{
+    @apply bg-white text-blue shadow-base;
+}
+.btn-blue{
+    @apply bg-blue text-white;
+}
+.btn-green{
+    @apply bg-green text-white;
+}
+.btn-grey{
+    @apply bg-secondary-4 text-secondary-2;
+}

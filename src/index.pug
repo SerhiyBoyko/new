@@ -1,0 +1,372 @@
+include src/pug/_svg_images
+
+
+mixin svg-icon_close()
+    svg.text-black.fill-current(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 18 18')
+        path(d='M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z')
+
+
+//-mixin hamburger()
+    .hamburger&attributes(attributes)
+        span.hamburger-box
+            span.hamburger-inner
+
+
+    
+
+doctype html
+html(lang='en')
+
+    include src/pug/_head
+
+    body.font-body.font-regular.text-primary
+
+        header(class='absolute top-0 left-0 right-0 flex items-center z-9 m:h-60px t:h-90px d:h-100px')
+
+            .container(class='flex items-center') 
+
+                a(href='#' class='transform d:mr-42px m:scale-75'): +logo_img()
+
+                nav.hide-mt
+                    ul.menu(class='flex space-x-10')
+                        
+                        li: a(href='#') Features
+                        li: a(href='#') About
+                        li: a(href='#') Pricing
+                        li: a(href='#') Blog
+                        li: a(href='#') Contact Us
+                div.hide-mt(class='d:flex ml-auto space-x-2.5')
+
+                    a.btn.btn-transperent(onclick='openModal()'): span.text Login
+                    a(href='#').btn.btn-blue: span.text Start Free Trial
+
+                .burder(class='flex items-center justify-center ml-auto rounded-full w-40px h-40px bg-blue d:hidden'): +svg-icon_burger()
+
+                //-+hamburger()
+
+        main(class='')
+
+            //-Top SECTION width cover
+
+            section(class='bg-no-repeat bg-cover m:bg-right td:bg-center td:flex m:pt-60px t:pt-90px d:pt-100px d:min-h-640 bg-img-cover')
+                
+                //- ADD shadow block on mobile for visible content
+                .bg-shaddow.only-m(class='absolute inset-0 bg-opacity-50 bg-primary')
+
+                .container(class='m:relative d:flex-initial m:z-2')
+
+                    div(class='mx-auto text-center td:px-5 m:pt-40px t:pt-30px d:pt-10 m:mb-50px td:mb-7 mt:max-w-600 d:max-w-787')
+                        
+                        h1(class='m:mb-30px td:mb-2.5') 
+                            |Welcome to your presonal SMS Dashboard
+
+                        span(class='inline-block m:text-mbace td:px-8 td:text-lg m:text-white td:text-secondary-1') 
+                            |Tempor minim anim eiusmod occaecat eu. In labore veniam incididunt mollit commodo nostrud non ex occaecat occaecat deserunt magna quis veniam. 
+                    
+                    div(class='td:flex td:justify-center m:space-y-2.5 td:space-x-2.5 td:pr-5 t:mb-60px')
+                        
+                        a(href='').btn.btn-blue: span.text 
+                            |Start Free Trial
+
+                        a(href='').btn.btn-white: span.text 
+                            |Discover
+
+                    div(class='m:mt-60px td:flex td:items-start t:justify-center d:justify-between')
+                        
+                        //-
+                        //- testimonial-box is like Example when main styles are not inline (@aply in css)
+                        //-
+                        
+                        .relative(class=' d:-top-120px d:-left-30px m:pt-30px td:pt-38px m:pr-20px td:pr-89px m:mb-30px td:pb-98px')
+                            
+                            //-LEFT message box
+
+                            div.testimonial-box(class='')
+
+                                span.text 
+                                    |Eiusmod irure ullamco eiusmod mollit ex qui. Mollit veniam tempor amet veniam eiusmod aute. Proident minim ad exercitation qui...
+                                
+                                img.avatar(src="images/avatar-1.jpg", alt="" class='w-45px h-45px')
+                            
+                            //-figures
+                            div(class='absolute top-0 right-0 bg-opacity-50 rounded-full pointer-events-none w-221px h-221px bg-secondary-6 z-3')
+                            div(class='absolute bg-opacity-50 rounded-full pointer-events-none bottom-29px left-40px w-37px h-37px bg-secondary-5 z-5')
+                            div.shape-dot(class='absolute pointer-events-none -bottom-72px right-18px z-4')
+
+                        .relative(class='t:mt-100px t:ml-100px d:-top-25px d:-left-55px m:pr-20px td:pr-24px m:pb-40px td:pb-120px')
+                            
+                            //-RIGHT message box
+
+                            div.testimonial-box.right(class='')
+                                
+                                span.text 
+                                    |Eiusmod irure ullamco eiusmod mollit ex qui. Mollit veniam tempor amet veniam eiusmod aute. Proident minim ad exercitation qui...
+                                
+                                img.avatar(src="images/avatar-2.jpg", alt="" class='w-45px h-45px')
+                            
+                            //-figures
+                            div(class='absolute bottom-0 bg-opacity-50 rounded-full pointer-events-none -right-5 w-151px h-151px bg-secondary-5 z-3')
+                            div.shape-dot(class='absolute pointer-events-none right-35px top-28 z-4')
+            
+            section(class='m:pt-60px td:mb-6 d:mt-7')
+
+                .container
+
+                    div(class='d:flex d:items-center d:justify-center')
+
+                        div(class='m:mb-30px t:mb-30px mt:max-w-560 d:max-w-330 mt:text-center mt:mx-auto')
+                            
+                            h2 
+                                |Nisi ad voluptate laboris dolor deserunt adipisicing ea amet mollit commodo voluptate aute adipisicing. Anim minim do exercitation id.
+                        
+                        div(class='mt:mx-auto mt:max-w-560 d:max-w-440 d:ml-11')
+                            
+                            ul.content-list(class='space-y-5')
+
+                                li 
+                                    |Nisi ad voluptate laboris dolor deserunt adipisicing ea amet mollit commodo voluptate aute adipisicing. 
+                                li 
+                                    |Nisi ad voluptate laboris dolor deserunt adipisicing. 
+                                li 
+                                    |Nisi ad voluptate laboris dolor deserunt.
+            
+            section(class='m:pt-60px m:mt-60px')
+
+                //- COVER
+
+                div(class='absolute inset-x-0 bg-no-repeat bg-cover m:bg-top td:bg-bottom m:inset-y-0 td:inset-y-8 bg-img-cover-2 -z-1')
+                
+                .container
+
+                    div(class='td:flex td:items-center td:justify-between')
+
+                        div(class='m:mb-30px t:py-50px t:pr-40px t:ml-auto t:w-3/6 t:max-w-360 m:w-full d:w-505px')
+                            
+                            //- Text icon wrapper
+
+                            div(class='m:max-w-440 m:mx-auto m:text-center')
+
+                                div(class='m:flex m:justify-center m:items-center m:mb-30px')
+
+                                    +svg-icon_1()(class='td:mb-25px m:mr-20px m:-ml-20px')
+                            
+                                    h2(class='td:mb-6px') 
+                                        |Set up FREE Trial Account
+                                p 
+                                    |Duis pariatur ullamco Lorem magna duis Lorem. Nisi quis sit Lorem cupidatat eiusmod ad et anim commodo dolor id voluptate cupidatat. Dolore ut excepteur enim tempor.
+                        
+                        
+                        //- FORM
+
+                        div(class=' m:-mx-20px t:mx-auto t:w-3/6 t:max-w-505')
+
+                            form.form(class='space-y-5 bg-white t:w-360px d:w-505px p-30px rounded-10 shadow-base')
+
+                                div 
+                                    label.label(class='mb-2') 
+                                        |Your Email
+                                    input.field(class='w-full' type="text" placeholder='Write here your email address')
+                                
+                                div
+                                    label.label(class='mb-2') 
+                                        |Your Phone number
+                                    input.field(class='w-full' type="text" placeholder='Write here your phone number')
+                                
+                                .pt-2 
+                                    button(class='btn btn-blue')
+                                        span.text 
+                                            |Start Start Free Trial
+
+            
+            section(class='m:mb-60px m:mt-60px t:mb-40px t:mt-40px d:mb-70px d:mt-45px') 
+
+                .container
+
+                    div(class='flex m:flex-col-reverse td:items-center td:justify-between')
+
+                        .relative(class='t:mx-auto m:pt-30px td:pt-45px d:pl-35px td:pb-42px td:pr-52px')
+
+                            //- MESSAGE WIDGET
+                            
+                            div(class='relative bg-white m:py-20px td:pb-5 m:space-y-2.5 td:space-y-5 td:pt-10 m:px-20px td:px-30px t:max-w-415 d:w-415px td:h-317px rounded-10 shadow-base z-9')
+                            
+                                //- item
+
+                                div(class='flex items-center border m:p-10px td:px-18px td:py-3.5 border-secondary-7 rounded-7')
+
+                                    //- profile img
+
+                                    img.avatar(src="images/avatar-2.jpg", alt="" class='mr-4 w-51px h-51px')
+
+                                    div.grid
+
+                                        //- profile name
+                                        
+                                        a(href='#' class='text-base leading-normal text-primary') 
+                                            |Brandie Warren
+
+                                        //- message
+
+                                        div(class='overflow-hidden')
+                                            p(class='overflow-hidden text-sm whitespace-nowrap overflow-ellipsis') 
+                                                |Sunt mollit dolor sunt non dolor sunt non cillum cillum pari...
+                                
+                                //- item
+
+                                div(class='flex items-center border m:mb-20 m:p-10px td:px-18px td:py-3.5 border-secondary-7 rounded-7')
+                                    
+                                        //- profile img
+
+                                        img.avatar(src="images/avatar-3.jpg", alt="" class='mr-4 w-51px h-51px')
+                                    
+                                        div.grid
+
+                                            //- profile name
+
+                                            a(href='#' class='text-base leading-normal text-primary') 
+                                                |Wade Wilson
+                                            
+                                            //- message
+
+                                            div(class='overflow-hidden')
+                                                p(class='overflow-hidden text-sm whitespace-nowrap overflow-ellipsis') 
+                                                    |Sunt mollit dolor sunt non cillum pari...
+                                
+                                
+                                div(class='td:row  m:space-y-2.5 td:space-x-2.5')
+                                    
+                                    //- Buttons
+                                    
+                                    a(href='').btn.btn-green: span.text 
+                                        |Create New Message
+
+                                    a(href='').btn.btn-grey: span.text 
+                                        |Archive
+                            
+                            
+                            //-figures
+                            div(class='absolute rounded-full pointer-events-none -top-7px -left-12 w-179px h-179px bg-secondary-6 z-3')
+                            div(class='absolute rounded-full pointer-events-none top-190px -left-12 w-53px h-53px bg-secondary-5 z-4')
+                            div.shape-dot(class='absolute bottom-0 right-0 pointer-events-none z-4')    
+                                    
+                        
+                        
+                        div(class='t:mr-auto t:max-w-360 m:w-full t:w-3/6 d:w-505px')
+
+                            //- Text icon wrapper
+
+                            div(class='m:max-w-440 m:mx-auto m:text-center')
+
+                                div(class='m:flex m:justify-center m:items-center m:mb-30px')
+
+                                    +svg-icon_2()(class='td:mb-25px m:mr-20px m:-ml-20px')
+                            
+                                    h2(class='td:mb-6px') 
+                                        |Outbound SMS
+
+                                p 
+                                    |Create and store templates for messages you send on a regular basis. Duis pariatur ullamco Lorem magna duis Lorem.             
+            
+           
+            section(class='pb-60px') 
+
+                .container
+
+                    div(class='td:flex td:items-center td:justify-between')
+
+                        div(class='t:relative t:z-9 t:ml-auto t:w-3/6 t:max-w-360 m:w-full d:w-505px')
+                            
+                            
+                            //- Text icon wrapper
+
+                            div(class='m:max-w-440 m:mx-auto m:text-center')
+
+                                div(class='m:justify-center m:flex m:items-center m:mb-30px')
+
+                                    +svg-icon_3()(class='td:mb-25px m:mr-20px m:-ml-20px')
+                            
+                                    h2(class='td:mb-6px') 
+                                        |Send SMS
+                            
+                                p
+                                    |Send the same message to multiple recipients in one scheduled event. If you want to send multiple messages to multiple recepients in one event, please use the bulk upload option in the main menu.
+
+                        
+                        .relative(class='t:mx-auto m:pt-30px td:pt-35px td:pb-58px d:pr-37px td:pl-55px d:-right-10px')
+                            
+                            
+                            //- Widget
+                            
+                            div(class='relative pb-5 overflow-hidden bg-white m:p-20px td:pt-30px td:px-30px t:w-full t:max-w-415 d:w-415px m:min-h-640 td:h-317px rounded-10 shadow-base z-9' )
+                                
+                                .shaddow(class='absolute bottom-0 left-0 right-0 h-40px bg-gradient-to-t from-white z-2')
+                                
+                                div(class='d:flex d:items-center d:justify-between m:mb-10px td:mb-20px')
+                                
+                                    
+                                    div(class='flex items-center')
+                                        
+                                        //- profile img
+
+                                        img.avatar(src="images/avatar-5.jpg", alt="" class='w-51px h-51px mr-16px')
+                                        
+                                        //- profile name
+
+                                        a(href='#' class='text-base leading-normal text-primary') 
+                                            |Ronald Simmmons                                         
+                                    
+
+                                    div(class='mt-20px flex space-x-2.5')
+                                    
+                                        //- Buttons
+
+                                        a(href='' class='m:w-full t:min-w-120 d:min-w-83').btn-min.btn-grey 
+                                            span.text 
+                                                |Select
+                                        
+                                        a(href='' class='').btn-roll.btn-green
+                                            +svg-icon_telegram()
+
+
+                                div(class='space-y-2.5')
+                                
+
+                                    //- message-box
+                                    div(class='border px-10px py-10px border-secondary-7 rounded-7') 
+                                        p.text-sm 
+                                            |Culpa pariatur minim eiusmod mollit qui. Dolore reprehenderit duis sint aliqua do magna pariatur ad reprehenderit laborum veniam consequat.
+                                    
+                                    //- message-box
+                                    div(class='border px-10px py-10px border-secondary-7 rounded-7') 
+                                        p.text-sm 
+                                            |Culpa pariatur minim eiusmod mollit qui. Dolore reprehenderit duis sint aliqua do magna pariatur ad reprehenderit laborum veniam consequat.
+                                    
+                                    //- message-box
+                                    div(class='border px-10px py-10px border-secondary-7 rounded-7') 
+                                        p.text-sm 
+                                            |Culpa pariatur minim eiusmod mollit qui. Dolore reprehenderit duis sint aliqua do magna pariatur ad reprehenderit laborum veniam consequat.
+                                                            
+                                    
+                            //-figures
+                            div(class='absolute top-0 rounded-full pointer-events-none -right-5px w-139px h-139px bg-secondary-5 z-3')
+                            div(class='absolute rounded-full pointer-events-none -bottom-24px -left-22px w-231px h-231px bg-secondary-6 z-3')
+                            div.shape-dot(class='absolute bottom-0 pointer-events-none left-1/2 -ml-76px z-4')
+
+        
+        .fixed.inset-0.z-50.flex.items-center.justify-center.w-full.overflow-hidden.main-modal.h-100.animated.fadeIn.faster(style='background: rgba(0,0,0,.7); t:hidden m:hidden')
+            .z-50.mx-auto.overflow-y-auto.container.relative
+                form.form(class='relative z-50 mx-auto space-y-5 overflow-y-auto bg-white t:w-360px d:w-780px p-30px rounded-10 shadow-base')
+                    div
+                        label.label(class='mb-2') 
+                            |Login
+                        input.field(class='w-full' type="text" placeholder='Enter your login')
+                    div 
+                        label.label(class='mb-2') 
+                            |Password
+                        input.field(class='w-full' type="password" placeholder='')
+                    .pt-2
+                        a(class='btn btn-green')
+                            span.text 
+                                |Login
+                        a(class='modal-close').btn.btn-grey: span.text Cancel
+        script(src="scripts/common.js") 

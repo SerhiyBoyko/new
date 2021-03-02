@@ -1,0 +1,28 @@
+.avatar{
+    @apply rounded-full object-cover;
+}
+.shape-dot{
+    @apply w-144px h-144px bg-center bg-no-repeat bg-img-dot;
+}
+
+
+.testimonial-box{
+    @apply px-12px pt-12px pb-6px relative m:w-full td:w-183px shadow-base rounded-5 bg-white z-9;
+}
+.testimonial-box .text{
+    @apply relative inline-block m:text-sm td:text-x text-secondary-2 z-8;
+}
+.testimonial-box .avatar{
+    @apply absolute -right-22px -top-16px z-9;
+}
+
+.testimonial-box::before{
+    content:'';
+    @apply absolute w-4 h-4 block -left-15px -bottom-6px pointer-events-none border-white z-6;
+    transform: rotate(-25deg) scale(-1, -1);
+    border-top: 23px solid #fff;
+    border-right: 23px solid transparent;
+}
+.testimonial-box.right{
+    @apply m:mr-auto;
+}

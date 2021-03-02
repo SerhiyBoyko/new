@@ -1,0 +1,6 @@
+.label{
+    @apply inline-block text-lg text-secondary-2 leading-normal ;
+}
+.field{ 
+    @apply mt:px-15px mt:py-10px d:p-3.5 text-lg border border-secondary-7 rounded-10 text-secondary-2 outline-none placeholder-secondary-3 focus:border-blue;
+}
