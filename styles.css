@@ -1,0 +1,19 @@
+
+@import "rools/_fonts.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    @import "page/_settings.css";
+    @import "page/_text.css";
+}
+
+@layer components {
+    @import "page/_layout.css";
+    @import "components/_buttons.css";
+    @import "components/_form.css"; 
+    @import "components/_shapes.css";
+    @import "components/_menu.css";
+}
